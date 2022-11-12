@@ -6,6 +6,4 @@ Incompletions as of yet:
 
 -Cannot use physical keyboard backspace to edit input  
 
--Missing flipping animation of letters after submitting  
-
 -Used letters don't turn disabled
