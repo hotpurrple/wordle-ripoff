@@ -74,3 +74,18 @@
 }
 
 
+.render {
+    animation: flip 0.3s linear;
+   
+}
+
+@keyframes flip{
+     from{
+        display: flex;
+        justify-content: center;
+        -webkit-transform: rotate(0deg)
+    }
+     to{
+       -webkit-transform: rotate(360deg)
+    }
+  }

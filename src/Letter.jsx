@@ -13,13 +13,13 @@ export default function Letter({ index, word, hasPassed }) {
 
                 setTimeout(() => {
                     if (targetWord[index] === word[index]) {
-                        setColor("correct")
+                        setColor("correct render")
                     } else if (targetWord.includes(word[index])) {
-                        setColor("close")
+                        setColor("close render")
                     } else {
-                        setColor("wrong")
+                        setColor("wrong render")
                     }
-                }, index*0)
+                }, index*500)
         }
     }, [hasPassed])
 
