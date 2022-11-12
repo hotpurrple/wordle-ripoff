@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.keyboard {
+    width: 35vw;
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    color: white;
+}
+
+.word {
+    width: 25vw;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.letter {
+    width: 15%;
+    height: 100%;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.correct {
+    background-color: green !important;
+}
+
+.close {
+    background-color: orange !important;
+}
+
+.message {
+    color: grey;
+}
+
+
+.simple-keyboard.myTheme1 {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.simple-keyboard.myTheme1 .hg-button {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
