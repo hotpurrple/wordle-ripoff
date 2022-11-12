@@ -23,11 +23,22 @@ function App() {
         dispatch(setCurrentWord(input))
     };
 
-    document.addEventListener("keydown", (e) => {
-        if (e.keyCode === 8) {
-           onKeyPress("{bksp}")
-        }
-    })
+
+    //keyboard component doesn't register backspace, dunno why
+    useEffect(() => {
+        document.addEventListener("keydown", (e) => {
+            switch (e.keyCode) {
+                case 8:
+                    keyboard.current?.setInput(keyboard.current.getInput().slice(0, -1))
+                    setInput(keyboard.current?.getInput())
+                    dispatch(setCurrentWord(keyboard.current?.getInput()))
+                    return
+                case 13 :
+                    
+            }
+
+        })
+    }, [])
 
 
     const onKeyPress = button => {
@@ -39,11 +50,7 @@ function App() {
                 keyboard.current?.clearInput();
             }
         }
-        if (button == "{bksp}") {
-            setInput(input.slice(0, -1))
-            dispatch(setCurrentWord(input))
-            console.log("basi qkoto");
-        }
+
     };
 
     return (

@@ -12,7 +12,7 @@ export const userInput = createSlice({
         setUserInput(state, action) {
             state.userInputs = [...state.userInputs, action.payload]
         },
-        setCurrentWord(state,action) {
+        setCurrentWord(state,action ) {
             state.currentWord = action.payload
         }
     },
